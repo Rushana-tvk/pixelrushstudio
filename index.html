@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PixelRush Studio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:  25px 40px;
+        }
+
+        nav img {
+            height: 120px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            color: #00eaff;
+        }
+
+        /* SECTIONS */
+        .section {
+            display: none;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #00eaff;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #111;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #00eaff;
+            text-decoration: none;
+        }
+
+        
+    </style>
+
+    <script>
+        function showSection(id) {
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <img src="logo.png" alt="PixelRush Logo">
+
+    <ul>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('services')">Services</li>
+        <li onclick="showSection('contact')">Contact</li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+    <h1>PixelRush Editing Studio</h1>
+    <p>Professional Video Editing | Creative Design | Reels & Branding</p>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="section">
+    <h1>Our Services</h1>
+
+    <div class="services">
+        <div class="card">
+            <h3>🎥 Video Editing</h3>
+            <p>High-quality cinematic edits for YouTube & clients</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Reels Editing</h3>
+            <p>Trending Instagram & TikTok reels</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Poster Design</h3>
+            <p>Professional social media posters</p>
+        </div>
+
+        <div class="card">
+            <h3>💼 CV Designing</h3>
+            <p>Modern and attractive CV creation</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h1>Contact Us</h1>
+
+    <p>📞 Phone: <a href="tel:0762866759">0762866759</a></p>
+
+    <p>📷 Instagram: 
+        <a href="https://instagram.com/pixelrush_global" target="_blank">
+            pixelrush_global
+        </a>
+    </p>
+
+    <p>💬 WhatsApp: 
+        <a href="https://wa.me/94762866759" target="_blank">
+            Chat Now
+        </a>
+    </p>
+</div>
+
+</body>
+</html>
